@@ -2,6 +2,7 @@ package lucca.shizuru.notifyhub.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
 import lucca.shizuru.notifyhub.domain.enums.NotificationPriority;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 
@@ -16,6 +17,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Notification {
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private NotificationChannel channel;
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
