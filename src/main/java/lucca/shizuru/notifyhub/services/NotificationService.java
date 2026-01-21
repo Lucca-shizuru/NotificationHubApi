@@ -2,6 +2,7 @@ package lucca.shizuru.notifyhub.services;
 
 import jakarta.transaction.Transactional;
 import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 import lucca.shizuru.notifyhub.repositories.NotificationRepository;
 import lucca.shizuru.notifyhub.services.strategies.NotificationStrategy;
@@ -23,7 +24,7 @@ public class NotificationService {
     }
 
     @Transactional
-    public Notification ScheduleNotification(Notification notification, String channel) {
+    public Notification ScheduleNotification(Notification notification, NotificationChannel channel) {
         strategies.stream()
                 .filter(s -> s.isApplicable(channel))
                 .findFirst()

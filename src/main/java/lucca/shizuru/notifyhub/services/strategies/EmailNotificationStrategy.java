@@ -2,6 +2,7 @@ package lucca.shizuru.notifyhub.services.strategies;
 
 
 import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
 
 public class EmailNotificationStrategy implements NotificationStrategy {
     @Override
@@ -12,8 +13,8 @@ public class EmailNotificationStrategy implements NotificationStrategy {
     }
 
     @Override
-    public boolean isApplicable(String chanel) {
-        return "Email".equalsIgnoreCase(chanel);
+    public boolean isApplicable(NotificationChannel chanel) {
+        return NotificationChannel.EMAIL.equals(chanel);
     }
 
 
