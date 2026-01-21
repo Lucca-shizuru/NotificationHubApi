@@ -3,7 +3,9 @@ package lucca.shizuru.notifyhub.services.strategies;
 
 import lucca.shizuru.notifyhub.domain.Notification;
 import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmailNotificationStrategy implements NotificationStrategy {
     @Override
     public void sendNotification(Notification notification) {
@@ -13,8 +15,8 @@ public class EmailNotificationStrategy implements NotificationStrategy {
     }
 
     @Override
-    public boolean isApplicable(NotificationChannel chanel) {
-        return NotificationChannel.EMAIL.equals(chanel);
+    public boolean isApplicable(NotificationChannel channel) {
+        return NotificationChannel.EMAIL.equals(channel);
     }
 
 

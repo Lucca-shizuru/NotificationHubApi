@@ -24,9 +24,9 @@ public class NotificationService {
     }
 
     @Transactional
-    public Notification ScheduleNotification(Notification notification, NotificationChannel channel) {
+    public Notification scheduleNotification(Notification notification) {
         strategies.stream()
-                .filter(s -> s.isApplicable(channel))
+                .filter(s -> s.isApplicable(notification.getChannel()))
                 .findFirst()
                 .ifPresentOrElse(
                         strategy -> {
@@ -34,7 +34,7 @@ public class NotificationService {
                             notification.setStatus(NotificationStatus.SENT);
                         },
                         () -> {
-                            System.out.println("Nenhuma estratégia encontrada para o canal: " + channel);
+                            System.out.println("Nenhuma estratégia encontrada para o canal: " + notification.getChannel());
                             notification.setStatus(NotificationStatus.FAILED);
                         }
                 );
