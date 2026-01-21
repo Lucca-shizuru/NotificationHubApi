@@ -7,3 +7,4 @@ public interface NotificationStrategy {
 
     boolean isApplicable(String chanel);
 }
+

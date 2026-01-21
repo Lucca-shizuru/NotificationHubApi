@@ -1,6 +1,6 @@
 package lucca.shizuru.notifyhub.domain;
 
-import jakarta.persistence.*; // Importa tudo do Jakarta de uma vez para não errar
+import jakarta.persistence.*;
 import lombok.*;
 import lucca.shizuru.notifyhub.domain.enums.NotificationPriority;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
