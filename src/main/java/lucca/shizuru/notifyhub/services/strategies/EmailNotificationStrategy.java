@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class EmailNotificationStrategy implements NotificationStrategy {
     @Override
     public void sendNotification(Notification notification) {
-        //simulação do envio do email por enquanto
         System.out.println("Enviando EMAIL para: " + notification.getDestination());
         System.out.println("Conteúdo: " + notification.getContent());
     }
