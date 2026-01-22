@@ -6,7 +6,7 @@ import lucca.shizuru.notifyhub.dto.NotificationRequestDto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class notificationFactory {
+public class NotificationFactory {
     public Notification createNotification (NotificationRequestDto dto){
         Notification notification = new Notification();
         notification.setContent(dto.content());
