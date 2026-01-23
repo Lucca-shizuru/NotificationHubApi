@@ -18,5 +18,12 @@ public class EmailNotificationStrategy implements NotificationStrategy {
         return NotificationChannel.EMAIL.equals(channel);
     }
 
+    @Override
+    public void validate(String destination) {
+        if (destination == null || !destination.contains("@")) {
+            throw new IllegalArgumentException("Para E-mail, o destino deve ser um endereço de e-mail válido.");
+        }
+    }
+
 
 }

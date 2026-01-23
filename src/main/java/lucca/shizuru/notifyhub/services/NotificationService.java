@@ -2,13 +2,10 @@ package lucca.shizuru.notifyhub.services;
 
 import jakarta.transaction.Transactional;
 import lucca.shizuru.notifyhub.domain.Notification;
-import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 import lucca.shizuru.notifyhub.repositories.NotificationRepository;
 import lucca.shizuru.notifyhub.services.strategies.NotificationStrategy;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,6 +27,7 @@ public class NotificationService {
                 .findFirst()
                 .ifPresentOrElse(
                         strategy -> {
+                            strategy.validate(notification.getDestination());
                             strategy.sendNotification(notification);
                             notification.setStatus(NotificationStatus.SENT);
                         },

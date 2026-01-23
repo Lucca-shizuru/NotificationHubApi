@@ -7,5 +7,6 @@ public interface NotificationStrategy {
     void sendNotification(Notification notification);
 
     boolean isApplicable(NotificationChannel channel);
+    void validate(String destination);
 }
 

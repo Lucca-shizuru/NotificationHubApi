@@ -19,5 +19,14 @@ public class SmsNotificationStrategy implements NotificationStrategy {
         return NotificationChannel.SMS.equals(channel);
     }
 
+    @Override
+    public void validate(String destination) {
+
+        if (destination == null || !destination.matches("\\d{10,11}")){
+            throw new IllegalArgumentException("Para SMS, o destino deve ser um número de telefone válido (apenas dígitos).");
+        }
+
+    }
+
 
 }
