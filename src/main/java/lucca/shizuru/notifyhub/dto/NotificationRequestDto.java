@@ -6,10 +6,18 @@ import lucca.shizuru.notifyhub.domain.enums.NotificationPriority;
 
 
 public record NotificationRequestDto (
-        @NotBlank String content,
-        @NotBlank NotificationChannel channel,
-        @NotBlank NotificationPriority priority,
-        @NotBlank String destination
+
+        @NotBlank(message = "O conteúdo é obrigatório")
+        String content,
+
+        @NotBlank(message = "O canal é obrigatório")
+        NotificationChannel channel,
+
+        @NotBlank(message = "A prioridade é obrigatório")
+        NotificationPriority priority,
+
+        @NotBlank(message = "O destino é obrigatório")
+        String destination
 
 
 ){

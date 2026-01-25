@@ -2,8 +2,11 @@ package lucca.shizuru.notifyhub.factory;
 
 
 import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 import lucca.shizuru.notifyhub.dto.NotificationRequestDto;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
 
 @Component
 public class NotificationFactory {
@@ -13,6 +16,9 @@ public class NotificationFactory {
         notification.setChannel(dto.channel());
         notification.setPriority(dto.priority());
         notification.setDestination(dto.destination());
+
+        notification.setStatus(NotificationStatus.PENDING);
+        notification.setCreatedAt(LocalDateTime.now());
 
         return notification;
     }
