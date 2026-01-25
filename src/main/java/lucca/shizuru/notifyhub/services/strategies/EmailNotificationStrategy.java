@@ -2,7 +2,7 @@
 
 
         import lombok.extern.slf4j.Slf4j;
-        import lucca.shizuru.notifyhub.domain.Notification;
+        import lucca.shizuru.notifyhub.domain.entities.Notification;
         import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
         import org.springframework.stereotype.Component;
 

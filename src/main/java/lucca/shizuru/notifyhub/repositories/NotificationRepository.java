@@ -1,6 +1,6 @@
 package lucca.shizuru.notifyhub.repositories;
 
-import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.entities.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

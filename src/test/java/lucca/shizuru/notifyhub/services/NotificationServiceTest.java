@@ -1,6 +1,6 @@
 package lucca.shizuru.notifyhub.services;
 
-import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.entities.Notification;
 import lucca.shizuru.notifyhub.domain.enums.NotificationChannel;
 import lucca.shizuru.notifyhub.domain.enums.NotificationPriority;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;

@@ -1,7 +1,7 @@
 package lucca.shizuru.notifyhub.factory;
 
 
-import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.entities.Notification;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 import lucca.shizuru.notifyhub.dto.NotificationRequestDto;
 import org.springframework.stereotype.Component;

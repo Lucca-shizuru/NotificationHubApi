@@ -1,4 +1,4 @@
-package lucca.shizuru.notifyhub.domain;
+package lucca.shizuru.notifyhub.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

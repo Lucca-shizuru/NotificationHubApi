@@ -3,9 +3,8 @@ package lucca.shizuru.notifyhub.controllers;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.entities.Notification;
 import lucca.shizuru.notifyhub.dto.NotificationRequestDto;
-import lucca.shizuru.notifyhub.factory.NotificationFactory;
 import lucca.shizuru.notifyhub.services.NotificationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -2,7 +2,7 @@ package lucca.shizuru.notifyhub.services;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import lucca.shizuru.notifyhub.domain.Notification;
+import lucca.shizuru.notifyhub.domain.entities.Notification;
 import lucca.shizuru.notifyhub.domain.enums.NotificationStatus;
 import lucca.shizuru.notifyhub.dto.NotificationRequestDto;
 import lucca.shizuru.notifyhub.factory.NotificationFactory;
@@ -10,7 +10,6 @@ import lucca.shizuru.notifyhub.repositories.NotificationRepository;
 import lucca.shizuru.notifyhub.services.strategies.NotificationStrategy;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Slf4j
